@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NISB</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+      <link
+      rel="shortcut icon"
+      href="./assets/images/Condensed---White-Circle.ico"
+      />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+      />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link href="./css/css.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/font.css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDhfTomFg03nXW2cD1RIysGXydVHHUNC0c",
+        authDomain: "nisb-website.firebaseapp.com",
+        projectId: "nisb-website",
+        storageBucket: "nisb-website.appspot.com",
+        messagingSenderId: "30096523025",
+        appId: "1:30096523025:web:e8351e5e22b937113cd6b0",
+        measurementId: "G-68PBHNGZP7",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </head>
+  <body>
+<!-- start -->
+    <!-- <div class="hero-announcement" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div class="hero-top mb-1">
+        <span style="font-size: 18px; color: #db0b5f">RUBIX'23 🎊</span>
+        <div id="day"></div>
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="sec"></div>
+        
+      </div>
+      <button style="padding: 5px 20px; background-color: #db0b5f; border-radius: 7px; margin-bottom: 10px;">
+        <a href="https://social.nisb.in" style="color: white; text-decoration: none;">
+          Register Now!
+        </a>
+      </button>
+      <marquee style="color: #db0b5f; font-size: 20px;" id="announcement"
+        >RUBIX'23 -
+        <span style="color: white">9th, 10th & 11th of Aug, 2023 🎊</span>
+      </marquee>
+    </div> -->
+
+<!-- end -->
+
+    <nav
+      class="navbar"
+      role="navigation"
+      style="
+        background-color: black;
+        z-index: 10000000;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding-left: 90px;
+      "
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img
+            src="./assets/images/Condensed---White.png"
+            alt="NISB LOGO"
+            style="padding: 0 0.75rem"
+          />
+          <span id="nisb-brand">NISB</span>
+        </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div
+        id="navbarBasicExample"
+        class="navbar-menu"
+        style="background-color: black"
+      >
+        <div class="navbar-start">
+          <a href="index.html" class="navbar-item">
+            <div class="navbar-item has-text-grey-light">Home</div>
+          </a>
+          <a href="#about" class="navbar-item">
+            <div class="navbar-item has-text-grey-light">About</div>
+          </a>
+          <a href="#events" class="navbar-item">
+            <div class="navbar-item has-text-grey-light">Events</div>
+          </a>
+          <a href="#team" class="navbar-item">
+            <div class="navbar-item has-text-grey-light">Team</div>
+          </a>
+          <a href="#chapters" class="navbar-item">
+            <div class="navbar-item has-text-grey-light">
+              Chapters & Affinity Groups
+            </div>
+          </a>
+          <a href="#contact" class="navbar-item">
+            <div class="navbar-item has-text-grey-light">Contact</div>
+          </a>
+        </div>
+      </div>
+    </nav>
+<!--
+    <header style="padding-top: 10vh; min-height: 100vh" id="about">
+      <a class="bdc-marquee-div" href="https://docs.google.com/forms/d/1krUEDSr4YLozxFvEJL3vNzj-SdRKrNbBbc-0tfTO3qE/viewform?edit_requested=true" target="_blank">
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+        <h2>Blood Donation Camp</h2>
+      </a>
+      <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <h1 style="font-weight: bold; font-size: 1.5rem; margin-top: 2rem;">Call for Volunteers! 🎊</h1>
+        <center><p>
+          <a href="https://bit.ly/volunteering1styear" target="_blank" class="button is-danger external-buttons">Volunteering for first years</a>
+          <a href="https://bit.ly/IEEEvolunteering" target="_blank" class="button is-danger external-buttons">Volunteering for 2nd/3rd/4th years</a>
+        </p></center>
+  -->
+
+  <!-- <header style="padding-top: 10vh; min-height: 100vh" id="about">
+    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+      
+      <h1 style="font-weight:bold; font-size: 1.5rem; margin-top: 2rem;">July 7th, 6:30pm</h1> 
+      <center><p>
+        <a href="https://bit.ly/IEEEvolunteering" target="_blank" class="button is-danger external-buttons">Click Here!</a>
+      </p></center> -->
+<!--
+  <div class="confetti" style="display: none;">
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+  </div>
+  
+  <header>
+    <div class="hero-announcement" style="display: flex; flex-direction: column; justify-content: center; align-items:center;">
+      <p style="font-size: 28px; margin: 0 auto; color: #db0b5f">MANAS'24 Release 🎊</p>
+      <p style="font-weight:300; font-size: 1rem;">July 7th 2024, 6:30pm</p>
+      <center>
+        <p>
+          <a id="confettiButton" href="https://drive.google.com/file/d/1ZG9JOIF7PYGPNckzRzu3w4Vf9Ln20XpD/view?usp=sharing" target="_blank" class="button is-danger external-buttons">Click Here!</a>
+        </p>
+      </center>
+    </div>
+  </header>
+  -->  
+    
+    <!-- <script>
+      document.getElementById('confettiButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default action of the link
+        document.querySelector('.confetti').style.display = 'block';
+    
+        setTimeout(function() {
+          document.querySelector('.confetti').style.display = 'none';
+          window.location.href = document.getElementById('confettiButton').href;
+        }, 2000); // 2000 milliseconds = 2 seconds
+      });
+    </script> -->
+    
+
+    
+      </div>
+      <div class="columns" style="max-width: 100vw">
+        <div id="about" class="column is-6 is-offset-1">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="special-title">What is NISB ?</div>
+          <p>
+            NISB is the IEEE student branch of National Institute of
+            Engineering. It is one of the oldest and most active student
+            branches of Karnataka. Having been active for more than 25 years, we have been
+            honoured and humbled with numerous awards and accolades over time,
+            including "The Best Student Chapter" of Region 10. We
+            organize and host a wide range of technical workshops and events. We
+            have our odd sem fest ANKURA and even sem fest ADROIT. Electronika ,
+            IPL are few our signature events.
+          </p>
+          <br />
+
+          <a
+            href="https://dsc.gg/nisb"
+            class="button is-info external-buttons"
+          >
+            <ion-icon name="logo-discord"></ion-icon> &nbsp;
+            <b>CommuNIEty Server</b>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/nisb/"
+            class="button is-link external-buttons"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon> &nbsp;
+            <b>LinkedIn</b>
+          </a>
+          <a
+            href="https://github.com/nisbweb"
+            class="button is-dark external-buttons"
+          >
+            <ion-icon name="logo-github"></ion-icon> &nbsp;
+            <b>Github</b>
+          </a>
+          <a
+            href="https://www.instagram.com/ieee_nie/"
+            class="button is-warning external-buttons"
+          >
+            <ion-icon name="logo-instagram"></ion-icon> &nbsp;
+            <b>Instagram</b>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCATF66mX12qcxEIA3lgSpaw"
+            class="button is-danger external-buttons"
+          >
+            <ion-icon name="logo-youtube"></ion-icon> &nbsp;
+            <b>Youtube</b>
+          </a>
+          <a
+            href="https://www.ieee.org/"
+            class="button is-primary external-buttons"
+          >
+            <b>IEEE Global</b>
+          </a>
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <div class="special-title">Why NISB ?</div>
+          <p>
+            NISB conducts various kinds of workshops, seminars, webinars,
+            technical talks, competitions, hackathons, and events througout the
+            semester to help its members for the all round development with the
+            advancing technology.
+          </p>
+          <br />
+          <br />
+          <br />
+
+          <div class="special-title">A Part of IEEE Bangalore Section</div>
+          
+          <p>
+            IEEE Bangalore Section was established in 1977 and is one of the
+            most vibrant and dynamic IEEE Section across globe. Over the years
+            the strength of the section has grown steadily and currently the
+            Section membership stands more than 23000.
+          </p>
+          <br />
+          
+          <img src="./assets/ieee-white.png"
+            alt="BS LOGO"
+            style="height: 40px; margin-right: 30px;"></img>
+          <img src="./assets/BS_white.png"
+            alt="BS LOGO"
+            style="height: 40px; margin-right: 30px;"></img>
+          <img src="./assets/MSS-Logo-White.png"
+            alt="BS LOGO"
+            style="height: 40px; margin-right: 30px;"></img>
+            <img src="./assets/NISB short white.png"
+            alt="BS LOGO"
+            style="height: 40px; margin-right: 30px;"></img>
+
+          
+          <br /><br /><br /><br /><br />
+          <div class="special-title" style="padding-bottom: 15px;" id="publications-section">Read our publications..</div>
+          <div class="columns" style="display: flex; gap: 80px; justify-content: center; flex-wrap: wrap;">
+            <div class="pub column">
+              <img src="./assets/images/Manas 26.png" alt="Manas 2025" style="height: 280px;"/>
+              <div>
+                <h1>MANAS</h1>
+                <h4>NISB Half Yearly Newsletter</h4>
+                <a href="https://drive.google.com/file/d/1IVuRX4ufSidQTY7JNqsXEw8h_bmfeoib/view?usp=drivesdk" target="_blank">Read more -></a>
+              </div>
+            </div>
+            <div class="pub column">
+              <img src="./assets/images/JijnasaVol11frontcover.png" alt="Jijnasa 2025" style="height: 280px;"/>
+              <div>
+                <h1>JIJNASA</h1>
+                <h4>NISB Yearly Magazine</h4>
+                <a href="https://tinyurl.com/JIJNASA-2025" target="_blank" style="margin-right: 10px;">Read Flipbook</a><br>
+                <a href="https://drive.google.com/file/d/1TDvLes_1qqPScCuo4VGmWwccofT2bV3R/view?usp=sharing" target="_blank">Download PDF</a>
+              </div>
+            </div>
+          </div>
+          <!-- <a
+            href="https://blog.nisb.in/"
+            class="button is-primary external-buttons"
+          >
+            <ion-icon name="book-outline"></ion-icon> &nbsp;
+            <b>Check out our blog here --\></b>
+          </a> -->
+          <!-- <a
+            href="https://ieeebangalore.org/newsletters/"
+            class="button is-danger external-buttons"
+          >
+            <ion-icon name="book-outline"></ion-icon> &nbsp;
+            <b>IEEE Banagalore Section Newsletters --\></b>
+          </a> -->
+        </div>
+        <div class="column is-5 lottieHeader">
+          <lottie-player
+            src="./assets/JSON/discuss.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          >
+          </lottie-player>
+        </div>
+      </div>
+    </header>
+
+    <!-- Timeline thingy -->
+    <section style="margin-top: 10em; text-align: center" id="activities">
+      <div class="head-norm">
+        <h1 style="font-size: small">Activities</h1>
+      </div>
+    </section>
+    <div
+      style="margin-left: 10%; margin-right: 10%"
+      class="program_details_area detials_bg_1 overlay2"
+    >
+      <div class="program_detail_wrap">
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span
+                class="wow fadeInLeft"
+                data-wow-duration="1s"
+                data-wow-delay=".3s"
+                >Focus Groups</span
+              >
+              <h4
+                class="wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay=".4s"
+              >
+                The people with common technical interest form groups to focus
+                and learn on particular technology and develop real life
+                application projects. We have been conducting various focus
+                groups on Microcontrollers like AVR Atmega, Deep Learning, Web
+                development & Python programming.
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer1"></span></h4> -->
+            </div>
+            <div
+              class="thumb wow fadeInUp"
+              data-wow-duration="1s"
+              data-wow-delay=".5s"
+            >
+              <br />
+            </div>
+          </div>
+        </div>
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span
+                class="wow fadeInLeft"
+                data-wow-duration="1s"
+                data-wow-delay=".3s"
+                >WIE Weekly Meetups</span
+              >
+              <h4
+                class="wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay=".4s"
+              >
+                Women in Engineering affinity group under NISB conducts weekly
+                meetups where women are mostly focused to learn a new technical
+                concepts and to implement simple projects.
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer2"></span></h4> -->
+            </div>
+            <div
+              class="thumb wow fadeInUp"
+              data-wow-duration="1s"
+              data-wow-delay=".5s"
+            ></div>
+          </div>
+        </div>
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span
+                class="wow fadeInRight"
+                data-wow-duration="1s"
+                data-wow-delay=".3s"
+                >Industrial Visits</span
+              >
+              <h4
+                class="wow fadeInRight"
+                data-wow-duration="1s"
+                data-wow-delay=".4s"
+              >
+                As a part of technical tour to make students get an exposure
+                about working of things in Industries every semester we conduct
+                Industrial visits. Our recent visits include ISRO space centre,
+                IISC Banglore, NOKIA, Cisco, Infosys.
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer3"></span></h4> -->
+            </div>
+            <div
+              class="thumb wow fadeInRight"
+              data-wow-duration="1s"
+              data-wow-delay=".5s"
+            >
+              <br />
+            </div>
+          </div>
+        </div>
+        <div class="single_propram">
+          <div class="inner_wrap">
+            <div class="circle_img"></div>
+            <div class="porgram_top">
+              <span
+                class="wow fadeInLeft"
+                data-wow-duration="1s"
+                data-wow-delay=".3s"
+                >Social Initiatives</span
+              >
+              <h4
+                class="wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay=".4s"
+                
+              >
+                Every year we visit Old age ashram's, Divya Deepa with a theme
+                and to make children and aged people familiar with basic use of
+                technology and its benefits for individuals.
+              </h4>
+              <!-- <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"><span class="timer4"></span></h4> -->
+            </div>
+            <div
+              class="thumb wow fadeInUp"
+              data-wow-duration="1s"
+              data-wow-delay=".5s"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card List -->
+
+    <div class="card-list-cont" id="events">
+      <section style="text-align: center">
+        <div class="head-norm">
+          <h1>Events</h1>
+        </div>
+      </section>
+      <section id="card-list" class="card-list">
+        <!-- cards here -->
+      </section>
+    </div>
+
+    <!-- Core Team -->
+    
+    <div class="team" id="team">
+      <section style="text-align: center">
+        <div class="head-norm">
+          <h1>Team</h1>
+        </div>
+      </section>
+      <section class="team-grid" style="text-align: center">
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/SagarSingh.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Sagar Kumar Singh</h1>
+            <h4>Chairperson</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Abhay.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Abhay Hegde</h1>
+            <h4>Vice Chairperson &</h4>
+            <h4>Secretary (MP)</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Yogesh.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Yogesh S</h1>
+            <h4>Treasurer</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Saklesh.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Sakleshwar Hubli</h1>
+            <h4>Secretary (IA)</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Anantha.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>K Anantha Krishna Rao</h1>
+            <h4>Secretary (Events)</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Shreya\ P\ V.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Shreya P V</h1>
+            <h4>Secretary (Events)</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Aadya.jpeg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Aadya Sharma</h1>
+            <h4>Secretary (MP)</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/SagarNM.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Sagar N Mutalik</h1>
+            <h4>Secretary (MD) &</h4>
+            <h4>SAC Coordinator</h4>
+          </div>
+        </div>
+        
+        
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Pranav.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Pranav A Korlahalli</h1>
+            <h4>Technology Coordinator</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Aashish.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Aashish Vatwani</h1>
+            <h4>Technology Coordinator</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Rahul.jpeg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Rahul K</h1>
+            <h4>Editor-in-Chief</h4>
+          </div>
+        </div>
+        <div style="
+                  background-position: center;
+                  background-image: url('./assets/cores25-26/Shresht.JPG');
+                " class="team-div">
+          <div class="desc">
+            <h1>Shresth S Juptimath</h1>
+            <h4>Sponsorship Coordinator</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Priyanka.jpeg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Priyanka Pramod Daivagna</h1>
+            <h4>CS Chairperson</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/PrerikaP.jpeg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Prerika P</h1>
+            <h4>CS Secretary</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Nikitha.jpeg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Nikitha H S</h1>
+            <h4>CASS Chairperson &</h4>
+            <h4>RAS Chairperson</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Suma.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Suma Acharya</h1>
+            <h4>CASS Secretary</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/SanjanaS.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Sanjana S Shetty</h1>
+            <h4>WIE Chairperson</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Panchami.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Panchami Urs S</h1>
+            <h4>WIE Secretary</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Rachit.jpeg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Rachit Kulkarni</h1>
+            <h4>RAS Secretary</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Mansoor.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Mohammed Mansooruddin</h1>
+            <h4>GRSS Chairperson</h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores25-26/Amol.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Amol S</h1>
+            <h4>GRSS Secretary</h4>
+          </div>
+        </div>
+        <!-- <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores23-24/Nameesh.jpg');
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Nameesh U Hulivana</h1>
+            <h4>GRSS Chairperson </h4>
+          </div>
+        </div>
+        <div
+          style="
+            background-position: center;
+            background-image: url('./assets/cores23-24/nandagopal2.jpg');
+            
+          "
+          class="team-div"
+        >
+          <div class="desc">
+            <h1>Nandagopal M Hallalli  </h1>
+            <h4>GRSS Secretary</h4>
+          </div>
+        </div> -->
+        <div></div>
+        <!-- <div class="vol-div">
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+                <div class="vol-box tooltip">
+                    <span class="tooltiptext">Iresh</span>
+                </div>
+            </div> -->
+      </section>
+    </div>
+    <div class="chapters" id="chapters">
+      <section style="text-align: center">
+        <div class="head-norm">
+          <h1>Chapters and Affinity Groups</h1>
+        </div>
+      </section>
+      <!-- width 100% to make sure it fits in the screen size-->
+      <div class="columns is-tablet society-card-parent">
+        <article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="./assets/images/wie.png" />
+              <br />
+              <h4 id="lf"><b>WOMEN IN ENGINEERING</b></h4>
+            </header>
+            <br /><br />
+            <p>
+              IEEE Women in Engineering (WIE) is one of the largest
+              international professional organization dedicated to promoting
+              women engineers and scientists and inspiring girls around the
+              world to follow their academic interests to a career in
+              engineering. The IEEE Women in Engineering Student Branch Affinity
+              Group at the National Institute of Engineering was formed on
+              April 2015.
+            </p>
+            <br />
+            <a href="https://wie.ieee.org" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+        <article class="card1 is-3 column col-3">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="./assets/images/cs.png" />
+              <br />
+              <h4 id="md"><b>COMPUTER SOCIETY</b></h4>
+            </header>
+            <br /><br />
+            <p>
+              The IEEE Computer Society is a global community dedicated to advancing computing technology through research, education,
+              and collaboration. It is one of IEEE's largest and most influential societies, shaping the future of software and
+              hardware.
+              
+              The Computer Society, started in 2015, has grown to become one of the most active chapters at NISB. With over 50
+              members, it brings together tech enthusiasts through workshops, competitions, and seminars. Driven by a passion for
+              innovation, it continues to equip its members with the skills and knowledge to excel in computing.
+              </p>
+            <br />
+            <a href="https://www.computer.org" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+        <article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="./assets/images/cas.png" />
+              <br />
+              <h4 id="ri"><b>CIRCUITS AND SYSTEMS SOCIETY</b></h4>
+            </header>
+            <br /><br />
+            <p>
+              The IEEE Circuits and Systems Society is the leading organization
+              that promotes the advancement of the theory, analysis, design,
+              tools, and implementation of circuits and systems. The field spans
+              their theoretical foundations, applications, and architectures, as
+              well as circuits and systems implementation of algorithms for
+              signal and information processing.
+            </p>
+            <br />
+            <a href="https://ieee-cas.org" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+      </div>
+      <div class="columns is-tablet society-card-parent">
+<article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="./assets/images/ras.png" />
+              <br />
+              <h4 id="ri"><b>Robotics and Automation Society</b></h4>
+            </header>
+            <br /><br />
+            <p>
+              The IEEE Robotics and Automation Society's objectives are scientific, literary and educational in character. The Society strives for the advancement of the theory and practice of robotics and automation engineering and science and of the allied arts and sciences, and for the maintenance of high professional standards among its members, all in consonance with the Constitution and Bylaws of the IEEE and with special attention to such aims within the Field of Interest of the Society.
+            </p>
+            <br />
+            <a href="https://www.ieee-ras.org" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+        <article class="card1 is-3 column">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="./assets/images/grss.png" />
+              <br />
+              <h4 id="ri"><b>Geoscience and Remote Sensing Society</b></h4>
+            </header>
+            <br /><br />
+            <p>
+              The IEEE Geoscience and Remote Sensing Society (GRSS) is a technical Society of the Institute of Electrical and Electronics Engineers (IEEE). GRSS fosters engagement of its members for the benefit of society through science, engineering, applications, and education as related to the development of the field of geoscience and remote sensing.
+            </p>
+            <br />
+            <a href="https://www.grss-ieee.org" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+        <article class="card1 is-3 column col-3">
+          <div class="container">
+            <header>
+              <img style="height: 100px" src="./assets/images/IEEE CEDA Logo.png" />
+              <br />
+              <h4 id="md"><b>Council on Electronic Design Automation</b></h4>
+            </header>
+            <br /><br />
+            <p>
+              The IEEE Council on Electronic Design Automation (CEDA) is the leading organization dedicated to the advancement of electronic design automation (EDA) theory, methodologies, tools, and practices for circuits and systems.
+CEDA fosters innovation by supporting the development and application of algorithms, software, and frameworks for the efficient design, verification, simulation, and implementation of modern electronic systems, ranging from integrated circuits and system-on-chips to complex heterogeneous architectures.
+The Council brings together researchers, engineers, and practitioners from academia and industry through publications, conferences, workshops, and educational initiatives.              </p>
+            <br />
+            <a href="https://ieee-ceda.org/" target="_blank">Read more &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+
+
+    <div class="contact" id="contact" style="padding-bottom: 70px; margin-top: 30px;">
+      <section style="text-align: center">
+        <div class="head-norm" style="padding-bottom: 20px;">
+          <h1>Contact</h1>
+        </div>
+      </section>
+      <div class="columns" style="margin-right: 5vw; margin-left: 5vw">
+        <div class="column">
+          <iframe
+            style="width: 100%"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.471105659842!2d76.63895801453533!3d12.284028791309561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf65561e102919%3A0xf947b18cc5ad3d88!2sThe%20National%20Institute%20of%20Engineering!5e0!3m2!1sen!2sin!4v1608920087132!5m2!1sen!2sin"
+            width="700"
+            height="250"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+        <div class="column is-7 contact-box">
+          <div class="columns">
+            <div class="column">
+              NIE IEEE Student Branch <br />
+              The National Institute of Engineering <br />
+              Mysuru <br /><br />
+            </div>
+            <div class="column">
+              Sagar Kumar Singh <br />
+              +91 86603 18339 <br />
+              <a href="mailto:sagarks@ieee.org"
+                >sagarks@ieee.org</a
+              >
+            </div>
+          </div>
+          <div class="icons-con-box">
+            <a class="btn" href="https://www.instagram.com/ieee_nie/">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a class="btn" href="https://www.linkedin.com/company/nisb/">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a
+              class="btn"
+              href="https://www.youtube.com/channel/UCATF66mX12qcxEIA3lgSpaw"
+            >
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a class="btn" href="https://github.com/nisbweb">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="./js/hamburger.js"></script>
+    <script type="text/javascript" src="./js/smotthScroll.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="text/javascript" src="nisbevents-export.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/firebase-content.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="js/timer-hero.js"></script>
+    <script src="js/timer-top.js"></script>
+    <script src="js/announcement.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+  // Confetti animation when publications section comes into view
+  document.addEventListener('DOMContentLoaded', function() {
+    const publicationsSection = document.getElementById('publications-section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Trigger confetti animation
+          const fireConfetti = () => {
+            confetti({
+              particleCount: 220,
+              spread: 180,
+              origin: { y: 0.5 },
+              colors: ['#d6c372', '#ffffff', '	#bec7c7'],
+              zIndex: 10000
+            });
+          };
+          
+          // Run confetti 3 times with delay
+          fireConfetti();
+          setTimeout(fireConfetti, 300);
+          setTimeout(fireConfetti, 600);
+          setTimeout(fireConfetti, 900);
+          // Unobserve after first trigger
+          observer.unobserve(publicationsSection);
+        }
+      });
+    }, { 
+      threshold: 0.5,
+      rootMargin: '0px 0px -100px 0px' // Triggers when 100px from bottom of viewport
+    });
+    
+    observer.observe(publicationsSection);
+  });
+</script>
+  </body>
+</html>
