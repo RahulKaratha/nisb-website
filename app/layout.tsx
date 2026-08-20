@@ -4,7 +4,7 @@ import "./cinematic-events.css";
 import "./legacy-scroll.css";
 
 export const metadata: Metadata = {
-  title: "NISB — National Institute of Engineering",
+  title: "NISB",
   description: "NISB — Powering curiosity, igniting innovation. The premier IEEE student branch at National Institute of Engineering, Mysuru. Awarded Region 10 Best Student Chapter.",
   keywords: ["IEEE", "NISB", "NIE Mysuru", "National Institute of Engineering", "Student Branch", "Engineering", "Innovation", "Region 10"],
   icons: {

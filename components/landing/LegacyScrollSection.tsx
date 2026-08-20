@@ -54,7 +54,7 @@ export default function SolarLegacySection() {
 
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 120, damping: 40 });
 
-  const words = "NISB is the IEEE student branch of National Institute of Engineering. More than 25 years of raw innovation. We host ADROIT, ANKURA, and Electronika. This isn't just a branch; it's a powerhouse of engineering legacy.".split(" ");
+  const words = "For generations of students, NISB has been a space where curiosity becomes capability and ideas become impact. Through a year-round calendar of technical initiatives, we bring together engineering, creativity, competition, and collaboration.                                This is more than an IEEE Student Branch. It is a legacy of ideas, a community of innovators, and a tradition of engineering excellence that continues to move forward.".split(" ");
 
   const legacyVideoUrl = 'https://drive.google.com/drive/folders/1OQU1uT4141Y4wj7bw2r3G2WvNrw6mdhk';
 
@@ -110,6 +110,9 @@ export default function SolarLegacySection() {
               { label: 'Founded', val: '1999', sub: '25+ Years of Tradition' },
               { label: 'Recognition', val: 'TOP R10', sub: 'Best Student Chapter' },
               { label: 'Flagships', val: 'ADROIT • ANKURA', sub: 'Premier Tech Symposia' },
+              { label: '2025 Honours', val: 'GRSS • CS', sub: 'Chapter Awards & Distinctions' },
+              { label: 'Legacy', val: '2018 • 2021 • 2023', sub: 'Outstanding Branch Recognitions' },
+              { label: 'Impact', val: '80+', sub: 'Initiatives Every Year' },
             ].map((stat, i) => (
               <motion.div
                 key={i}

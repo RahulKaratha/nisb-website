@@ -179,8 +179,14 @@ export default function SiteFooter() {
                     STUDENT BRANCH
                   </p>
                   <p className="text-sm font-bold text-[var(--star-white)] mt-1">
-                    NIE IEEE Branch
+                    NIE IEEE Student Branch
                   </p>
+                  <a
+                    href="mailto:nisb@nie.ac.in"
+                    className="text-[var(--accent)] font-bold hover:underline block text-[11px]"
+                  >
+                    nisb@nie.ac.in
+                  </a>
                   <p className="text-[var(--text-muted)] text-[11px] mt-0.5">
                     NIE Mysuru — 570008
                   </p>

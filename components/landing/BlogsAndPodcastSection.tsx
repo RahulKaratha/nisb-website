@@ -251,7 +251,7 @@ export default function BlogsAndPodcastSection() {
                   TECH N <span className="text-[var(--accent)]">TALES</span>
                 </h3>
                 <p className="text-xs sm:text-sm font-sans text-[var(--text-muted)] leading-relaxed">
-                  Official NISB video interviews, industry insights, alumni journeys, and inspiring stories behind 25+ years of engineering excellence.
+                  Tech-N-Tales is NISB’s official podcast series, where we explore the technologies we learn (and sometimes don’t), along with the stories that truly matter!
                 </p>
               </div>
             </div>

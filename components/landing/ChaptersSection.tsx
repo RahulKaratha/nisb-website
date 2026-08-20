@@ -11,48 +11,47 @@ const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { type: 'spring' as const, stiffness: 50, damping: 20 } },
 };
-
 const CHAPTERS = [
   {
     id: 'wie',
     name: 'Women in Engineering (WIE)',
     logo: 'https://raw.githubusercontent.com/nisbweb/nisbweb.github.io/master/assets/images/wie.png',
-    desc: 'Promoting women engineers and scientists since April 2015. Weekly meetups focusing on learning technical concepts, research skills, and collaborative projects.',
+    desc: 'A community built around inclusion, leadership, and possibility! WIE empowers students to explore technology, champion diverse perspectives, and create meaningful impact across disciplines. From technical initiatives and creative pursuits to humanitarian outreach, WIE creates spaces where ideas are heard, voices are amplified, and leadership takes shape. Its flagship fest, Inspiro, brings together innovation, expression, and purpose in a celebration of what students can achieve when given the opportunity.',
     link: 'https://wie.ieee.org',
   },
   {
     id: 'cs',
     name: 'Computer Society (CS)',
     logo: 'https://raw.githubusercontent.com/nisbweb/nisbweb.github.io/master/assets/images/cs.png',
-    desc: 'Advancing computing technology through research and collaboration. Over 50 active members equipping themselves with future tech skills.',
+    desc: 'Where algorithms become ideas, and ideas become technology! The Computer Society brings together students passionate about software, artificial intelligence, cybersecurity, blockchain, and the ever-evolving world of computing. Through technical initiatives, hands-on learning, and a culture of building, CS turns curiosity into capability. Its flagship fest, Rubix, brings together problem-solving, competition, and innovation in an arena built for the next generation of technologists.',
     link: 'https://www.computer.org',
   },
   {
     id: 'ceda',
     name: 'Council on Electronic Design Automation (CEDA)',
     logo: 'https://ieee-ceda.org/files/ieeeceda/IEEE%20CEDA%20Logo.png',
-    desc: 'The IEEE Council on Electronic Design Automation (CEDA) is the leading organization dedicated to the advancement of electronic design automation (EDA) theory, methodologies, tools, and practices for circuits and systems.',
+    desc: 'Where electronics meets intelligent design! CEDA explores the methodologies, tools, and technologies that shape modern electronic systems. From circuit design and system architecture to electronic design automation, it introduces students to the sophisticated tools behind the hardware that powers our world. CEDA is where precision meets innovation, and where complex designs become real possibilities.',
     link: 'https://ieee-ceda.org',
   },
   {
     id: 'cass',
     name: 'Circuits & Systems (CASS)',
     logo: 'https://raw.githubusercontent.com/nisbweb/nisbweb.github.io/master/assets/images/cas.png',
-    desc: 'Advancement of the theory, analysis, design, tools, and implementation of circuits and systems.',
+    desc: 'For those who think in signals, reason in systems, and build with precision! CASS explores the fundamental language of modern electronics: circuits, signals, systems, and the technologies built upon them. It transforms theory into hands-on exploration, encouraging students to understand not only how systems work, but how they can be designed better. Its flagship fest, Illume, brings together workshops, competitions, and immersive technical experiences for curious minds ready to spark something extraordinary.',
     link: 'https://ieee-cas.org',
   },
   {
     id: 'ras',
     name: 'Robotics & Automation Society (RAS)',
     logo: 'https://raw.githubusercontent.com/nisbweb/nisbweb.github.io/master/assets/images/ras.png',
-    desc: 'Scientific and educational advancement of the theory and practice of robotics and automation engineering.',
+    desc: 'Where intelligence meets motion! RAS brings together robotics, automation, artificial intelligence, and autonomous systems to turn ambitious concepts into intelligent machines. Through experimentation, prototyping, and collaborative problem-solving, students learn to build systems that can sense, decide, and act. From the first line of code to the final prototype, RAS is a playground for those who want to make machines move, think, and respond.',
     link: 'https://www.ieee-ras.org',
   },
   {
     id: 'grss',
     name: 'Geoscience & Remote Sensing (GRSS)',
     logo: 'https://raw.githubusercontent.com/nisbweb/nisbweb.github.io/master/assets/images/grss.png',
-    desc: 'Fostering engagement through science, engineering, and applications related to geoscience and remote sensing.',
+    desc: 'Look beyond the horizon! GRSS brings technology to the scale of our planet, exploring satellite imaging, remote sensing, geospatial intelligence, environmental monitoring, and disaster management. It gives students the tools to understand Earth from perspectives far beyond the ground beneath us. By transforming observations into actionable insights, GRSS connects technology, data, and the planet we call home.',
     link: 'https://www.grss-ieee.org',
   },
 ];
